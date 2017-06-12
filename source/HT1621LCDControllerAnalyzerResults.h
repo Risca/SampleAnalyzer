@@ -1,16 +1,16 @@
-#ifndef SIMPLESERIAL_ANALYZER_RESULTS
-#define SIMPLESERIAL_ANALYZER_RESULTS
+#ifndef HT1621LCDCONTROLLER_ANALYZER_RESULTS
+#define HT1621LCDCONTROLLER_ANALYZER_RESULTS
 
 #include <AnalyzerResults.h>
 
-class SimpleSerialAnalyzer;
-class SimpleSerialAnalyzerSettings;
+class HT1621LCDControllerAnalyzer;
+class HT1621LCDControllerAnalyzerSettings;
 
-class SimpleSerialAnalyzerResults : public AnalyzerResults
+class HT1621LCDControllerAnalyzerResults : public AnalyzerResults
 {
 public:
-	SimpleSerialAnalyzerResults( SimpleSerialAnalyzer* analyzer, SimpleSerialAnalyzerSettings* settings );
-	virtual ~SimpleSerialAnalyzerResults();
+	HT1621LCDControllerAnalyzerResults( HT1621LCDControllerAnalyzer* analyzer, HT1621LCDControllerAnalyzerSettings* settings );
+	virtual ~HT1621LCDControllerAnalyzerResults();
 
 	virtual void GenerateBubbleText( U64 frame_index, Channel& channel, DisplayBase display_base );
 	virtual void GenerateExportFile( const char* file, DisplayBase display_base, U32 export_type_user_id );
@@ -22,8 +22,8 @@ public:
 protected: //functions
 
 protected:  //vars
-	SimpleSerialAnalyzerSettings* mSettings;
-	SimpleSerialAnalyzer* mAnalyzer;
+	HT1621LCDControllerAnalyzerSettings* mSettings;
+	HT1621LCDControllerAnalyzer* mAnalyzer;
 };
 
-#endif //SIMPLESERIAL_ANALYZER_RESULTS
+#endif //HT1621LCDCONTROLLER_ANALYZER_RESULTS
